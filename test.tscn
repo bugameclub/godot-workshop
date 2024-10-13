@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv35mt8nqj4vu"]
+
+[ext_resource type="PackedScene" uid="uid://bha74x6s210lk" path="res://ball.tscn" id="1_o4ckg"]
+[ext_resource type="Script" path="res://stage.gd" id="2_ldg8t"]
+[ext_resource type="PackedScene" uid="uid://b7obfcdbxx51n" path="res://wall.tscn" id="2_qtjff"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(624, 320)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Ball" parent="." instance=ExtResource("1_o4ckg")]
+position = Vector2(173, -237)
+
+[node name="Ball2" parent="." instance=ExtResource("1_o4ckg")]
+position = Vector2(1053, 94)
+
+[node name="Stage" type="Node2D" parent="."]
+position = Vector2(619, 328)
+rotation = 0.0285331
+script = ExtResource("2_ldg8t")
+
+[node name="Wall" parent="Stage" instance=ExtResource("2_qtjff")]
+position = Vector2(-290, 208)
+rotation = 0.288182
+
+[node name="Wall2" parent="Stage" instance=ExtResource("2_qtjff")]
+position = Vector2(337, 257)
+rotation = -0.293593

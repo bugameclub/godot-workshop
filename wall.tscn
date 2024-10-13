@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7obfcdbxx51n"]
+
+[ext_resource type="Texture2D" uid="uid://cimi43lo410o" path="res://Bouncy_Platform_Long.png" id="1_72q1u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekmnh"]
+size = Vector2(825, 56.0143)
+
+[node name="Wall" type="RigidBody2D"]
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.72, 1)
+texture = ExtResource("1_72q1u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.500015, 0)
+shape = SubResource("RectangleShape2D_ekmnh")
